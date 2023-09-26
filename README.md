@@ -1,8 +1,8 @@
-### User Microservice
+# User Microservice
 This project is a user microservice built using NestJS, MongoDB, and provides CRUD operations for user management and authentication methods.
 
 ## Getting Started
-# Prerequisites
+### Prerequisites
 Before you begin, ensure you have the following prerequisites installed:
 
 - Node.js and npm
@@ -10,7 +10,7 @@ Before you begin, ensure you have the following prerequisites installed:
 - Docker (optional, for containerization)
 - GitLab CI/CD Runner (for GitLab CI/CD)
 
-# Installation
+### Installation
 1. Clone the repository:
 
 ```bash
