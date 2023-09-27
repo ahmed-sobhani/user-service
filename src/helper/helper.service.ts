@@ -159,49 +159,6 @@ export class HelperService {
     return buff.toString('utf8');
   }
 
-  // async jwtCreateToken(
-  //     payload: Record<string, any>,
-  //     options?: IHelperJwtOptions
-  // ): Promise<string> {
-  //     return this.jwtService.sign(payload, {
-  //         secret:
-  //             options.secretKey ||
-  //             this.configService.get<string>('helper.jwt.secretKey'),
-  //         expiresIn:
-  //             options.expiredIn ||
-  //             this.configService.get<string>('helper.jwt.expirationTime'),
-  //         notBefore:
-  //             options.notBefore ||
-  //             this.configService.get<string>(
-  //                 'helper.jwt.notBeforeExpirationTime'
-  //             )
-  //     });
-  // }
-
-  // async jwtVerify(
-  //     token: string,
-  //     options?: IHelperJwtOptions
-  // ): Promise<boolean> {
-  //     const payload: Record<string, any> = this.jwtService.verify(token, {
-  //         secret:
-  //             options.secretKey ||
-  //             this.configService.get<string>('helper.jwt.secretKey')
-  //     });
-
-  //     return payload ? true : false;
-  // }
-
-  // async jwtPayload(
-  //     token: string,
-  //     options?: IHelperJwtOptions
-  // ): Promise<Record<string, any>> {
-  //     return this.jwtService.verify(token, {
-  //         secret:
-  //             options.secretKey ||
-  //             this.configService.get<string>('helper.jwt.secretKey')
-  //     });
-  // }
-
   /**
    * AES 256 Bit Encryption Function
    * @param data data string

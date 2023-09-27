@@ -29,6 +29,10 @@ class ConfigService {
     return value;
   }
 
+  public get<T>(key:string, throwOnMissing = false): T {
+    return this.getValue(key, throwOnMissing) as unknown as T
+  }
+
   /**
    * Check required key's are exist. If not, app does not run
    * @param keys List of required key's

@@ -5,9 +5,8 @@ import { Exclude, Expose } from 'class-transformer';
  */
 @Exclude()
 export class ResultDto {
-
   /**
-   * Create an object of Result 
+   * Create an object of Result
    * @param status Status of request
    * @param data Response data
    * @param error If request failed, error has value
@@ -29,4 +28,13 @@ export class ResultDto {
   /** If request fail, error is exist and has value */
   @Expose()
   error?: any;
+}
+
+export interface UserContext {
+  id: number;
+  email: string;
+}
+
+export interface RequestContext {
+  user: UserContext;
 }

@@ -38,6 +38,7 @@
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
     "dotenv": "^10.0.0",
+    "kafkajs": "^2.2.4",
     "moment": "^2.29.1",
     "mongoose": "^6.0.5",
     "nestjs-command": "^3.0.2",
