@@ -7,6 +7,9 @@ import { UserModule } from './user/user.module';
 import { SeedsModule } from './seeds/seeds.module';
 import { HelperModule } from './helper/helper.module';
 import { AuthModule } from './auth/auth.module';
+import { ClientsModule } from '@nestjs/microservices';
+import { ClientsModuleAsyncProviderOptions, busFactory } from './config/messaging.config';
+import { KafkaClientProxy } from './common/messaging/kafka.client.proxy';
 
 @Module({
   imports: [
@@ -17,8 +20,13 @@ import { AuthModule } from './auth/auth.module';
     SeedsModule,
     HelperModule,
     AuthModule,
+    ClientsModule.registerAsync(ClientsModuleAsyncProviderOptions),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    KafkaClientProxy,
+    busFactory,
+  ],
 })
 export class AppModule {}
