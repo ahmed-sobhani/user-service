@@ -1,16 +1,16 @@
-FROM node:14-alpine3.14 AS development
+FROM node:16-alpine3.14 AS development
 
 WORKDIR /usr/src/app
 
 COPY package*.json yarn.lock entrypoint.sh ./
 
-RUN yarn add glob rimraf
+RUN npm install -g rimraf
 
-RUN yarn install --pure-lockfile --only=development
+RUN npm install  --only=development
 
 COPY . .
 
-RUN yarn build
+RUN npm run build
 
 RUN chmod 777 ./entrypoint.sh
 
@@ -23,7 +23,7 @@ WORKDIR /usr/src/app
 
 COPY package*.json yarn.lock entrypoint.sh ./
 
-RUN yarn install --pure-lockfile --only=production
+RUN npm install  --only=production
 
 COPY . .
 
